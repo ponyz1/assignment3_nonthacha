@@ -1,0 +1,42 @@
+
+<div class="form">
+<from [formGroup]="demo" class="from">
+    <p>Please fill in the information correctly!!!</p>
+    <label>name</label>
+    <input id="name" type="text" formControlName="name" >
+    <!-- <p>Name: {{nameValue | change}}</p> -->
+    <label>lastname</label>
+    <input id="lastname" type="text" formControlName="lastname" >
+    <!-- <p>LastName: {{lastNameValue | change}}</p> -->
+    <label>date of dirth</label>
+    <input id="dateOfDirth" type="date" formControlName="dateOfDirth">
+    <label>tel</label>
+    <input id="tel" type="tel" formControlName="tel">
+    <label>address</label>
+    <input id="address" type="text" formControlName="address">
+    
+</from>
+<ng-container *appDonate="demo" >
+    <form [formGroup]="donateForm" class="form">
+        <label>Bank Card Number</label>
+        <input id="bankCardNumber" type="text" formControlName="bankCardNumber">
+        <label>ATM Card Code</label>
+        <input id="atmCardCode" type="text" formControlName="atmCardCode">
+    </form>
+</ng-container>
+
+<!-- <input type="text" [(ngModel)]="test">
+<p>text: {{test | change}}</p> -->
+</div>
+<div class="form">
+<from [formGroup]="demo" >
+    <p>Please check the accuracy!!!</p>
+    <p>Name: {{ demo.get('name')?.value | change }}</p>
+    <p>LastName: {{ demo.get('lastname')?.value | change }}</p> 
+    <p>date of dirth: {{demo.get('dateOfDirth')?.value}}</p>
+    <p>tel: {{ demo.get('tel')?.value }}</p>
+    <p>address: {{ demo.get('address')?.value }}</p>
+    <button [disabled]="demo.invalid"  class="button" >submit</button>
+</from>
+
+</div>

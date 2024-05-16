@@ -1,0 +1,21 @@
+<!-- 
+<p>login-form works!</p>
+<form [formGroup]="login">
+    <label appStealth>email</label>
+    <input id="email" type="text" formControlName="email" appStealth>
+    <label appStealth>password</label>
+    <input id="password" type="password" formControlName="password" appStealth>
+</form>
+<button [disabled]="login.invalid" [routerLink]="['/demographic']">submit</button> -->
+
+<p class="text">find to Login!!!</p>
+<form [formGroup]="login" class="login-form" appStealth>
+    <label appStealth>email</label>
+    <input id="email" type="text" formControlName="email" appStealth>
+    <label appStealth>password</label>
+    <input id="password" type="password" formControlName="password" appStealth>
+    <div class="position">
+    <button [disabled]="login.invalid" [routerLink]="['/demographic']" class="button" appStealth>submit</button>
+</div>
+</form>
+
